@@ -5,9 +5,9 @@ services:
             context: ./
         ports:
             - "18999:5000"
-        entrypoint: python /{{cookiecutter_aiml}}/api/app.py
+        entrypoint: python /{{cookiecutter.project_name}}/api/app.py
         volumes:
-            - "/etc/time_series_forecast:/etc/{{cookiecutter_aiml}}"
+            - "/etc/time_series_forecast:/etc/{{cookiecutter.project_name}}"
         environment:
             - PYTHONUNBUFFERED=1
             - PYTHONPATH=/{{cookiecutter.project_name}}
