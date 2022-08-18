@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+    {{cookiecutter.project_name}}:
+        build:
+            context: ./
+        ports:
+            - "18999:5000"
+        entrypoint: python /{{cookiecutter_aiml}}/api/app.py
+        volumes:
+            - "/etc/time_series_forecast:/etc/{{cookiecutter_aiml}}"
+        environment:
+            - PYTHONUNBUFFERED=1
+            - PYTHONPATH=/{{cookiecutter.project_name}}
+            # secrets:
+            # - config_password

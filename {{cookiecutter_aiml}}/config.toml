@@ -1,0 +1,87 @@
+[DEFAULT]
+bind_host = 0.0.0.0
+bind_port = 18080
+app_host = 127.0.0.1
+service = heatstack
+service_id = CCMRSyuf+j+8oGtI2mIaZA==
+rabbit_password = guest
+rpc_backend = rabbit
+executor_thread_pool_size = 1000
+rpc_conn_pool_size = 300
+rpc_poll_timeout = 300
+rpc_response_timeout = 300
+service_name =Azure
+
+termination_interval = 15
+encryption_key = TltSRB9skXukXl0tBL+RPg==
+#logging_default_format_string= %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s:%(lineno)d [-] %(funcName)s %(instance)s%(message)s
+request_throttling_per_day_limit = 20000000 per day
+request_throttling_per_hour_limit = 200000 per hour
+inventory_bind_port = 18087
+file_server_url = https://dev-files.corestack.io
+
+metric_value_storage_refresh_interval = 120
+
+#Path to sample service file
+sample_service_file_path = service/sample
+
+#Email template - Append request type
+site_parameter = http
+
+#Email template - Add Image to the Email
+email_resource_url = http://dev.corestack.io
+user_guide_url = http://docs.corestack.io
+
+#Path to cache directory
+cache_dir = /opt/core/cache
+
+#Path to temporary files directory
+tmp_dir = /opt/core/cache/tmp
+
+#Request approval link
+request_approval_link = 
+allow_duplicate_manager = 
+use_ldap_bind_user = 
+
+#Terminated VM's snapshot Retention days
+retention_days = 7
+
+#Template/Script Job Timeout
+job_timeout = 90
+script_job_timeout = 60
+
+#Script Job Output Maximum Length
+script_job_output_length = 1024
+
+#Enable/Disable workflow. If enabled, configure workflow details
+enable_workflow = false
+
+#The items to be displayed for notify_icon.(can be multiple separated by ,)
+#available_values = notified_mails, workspaces
+notify_icon = notified_mails, workspaces
+
+#The terminate rule name for notify_icon
+#available_values = terminate_day, terminate_3_days, terminate_week
+rule_name = terminate_day
+
+#Enable/Disable service_inventory_access_policy
+enable_access_policy = false
+
+#Enable/Disable AuditLog. If enabled, configure audit_db details
+enable_audit = true
+deployment_flavor = allinone
+
+
+[database]
+database_name = ""
+host = localhost
+port = 27017
+# If Authentication is Enabled in MongoDB use the following
+username = ""
+#If password has Dollor($) please add backslash(\) before it.
+password = NLJ8Mfi6zrGKO1R4hWd7FQmWQ3S+93jF+W4iTLlgFfM=
+auth_database = admin
+# If Replication is Enabled in MongoDB use the following
+replica_set_name = replicasetdev
+replica_set_hosts = 
+read_preference = secondaryPreferred

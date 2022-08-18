@@ -1,0 +1,8 @@
+{
+	"full_name": "yourname",
+	"email": "yourname@example.com",
+	"github_username": "username",
+	"project_name": "cookiecutter_project",
+	"author": "cookiecutter_author",
+	"domain_name": "cookiecutter_domain"
+}
